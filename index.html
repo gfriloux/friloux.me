@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>famille-nom.fr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background: #0d1117;
+      color: #c9d1d9;
+      font-family: "SF Mono", "Menlo", "Consolas", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .terminal {
+      width: 90%;
+      max-width: 700px;
+      background: #161b22;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .red { background: #ff5f56; }
+    .yellow { background: #ffbd2e; }
+    .green { background: #27c93f; }
+
+    .line {
+      margin: 6px 0;
+      white-space: pre-wrap;
+    }
+
+    .prompt {
+      color: #58a6ff;
+    }
+
+    .command {
+      color: #79c0ff;
+    }
+
+    .output {
+      color: #c9d1d9;
+    }
+
+    .accent {
+      color: #3fb950;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #8b949e;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* effet curseur */
+    .cursor {
+      /* content: "█"; */
+      display: inline-block;
+      margin-left: 0px;
+      animation: blink 1s infinite;
+    }
+
+    .input {
+      white-space: nowrap;
+      display: inline;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="terminal">
+    
+    <div class="header">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green"></div>
+    </div>
+
+    <div class="line">
+      <span class="prompt">anonymous@friloux.me</span>:<span class="accent">~</span>$ <span class="command">whoami</span>
+    </div>
+    <div class="line output">
+      domaine familial privé
+    </div>
+
+    <div class="line">
+      <span class="prompt">anonymous@friloux.me</span>:<span class="accent">~</span>$ <span class="command">cat services.txt</span>
+    </div>
+    <div class="line output">
+      - adresses e-mail personnalisées  
+      - partage de fichiers  
+      - services internes sécurisés
+    </div>
+
+    <div class="line">
+      <span class="prompt">anonymous@friloux.me</span>:<span class="accent">~</span>$ <span class="command">info</span>
+    </div>
+    <div class="line output">
+      Ce site est réservé à un usage familial  
+      Aucune activité commerciale
+      Si vous portez le même patronyme, vous pouvez nous contacter.
+    </div>
+
+    <div class="line">
+      <span class="prompt">anonymous@friloux.me</span>:<span class="accent">~</span>$ <span class="command">contact</span>
+    </div>
+    <div class="line output">
+      <a href="mailto:contact@famille-nom.fr">contact@friloux.me</a>
+    </div>
+
+    <div class="line">
+      <span class="prompt">anonymous@friloux.me</span>:<span class="accent">~</span>$ <span class="cursor">█</span>
+    </div>
+
+  </div>
+</body>
+</html>
